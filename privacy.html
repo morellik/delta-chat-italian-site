@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Delta Chat</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+       <link href="css/mystyles.css" rel="stylesheet" />
+               <script>
+                   function updateTheme() {
+                       if (document.querySelector("html").getAttribute('data-bs-theme') == 'dark') {
+                                                 document.querySelector("html").setAttribute('data-bs-theme','light')
+                                               }
+                                           else {
+                                               document.querySelector("html").setAttribute('data-bs-theme','dark')
+                                       }
+                   }
+   
+                   const toggle = document.querySelector('.toggle-input');
+                   const initialState = localStorage.getItem('toggleState') == 'true';
+                   toggle.checked = initialState;
+   
+                   toggle.addEventListener('change', function() {
+                       
+                           localStorage.setItem('toggleState', toggle.checked);
+                   });
+               </script>
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand text-success" href="index.html">Delta Chat Italia</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="info.html">Informazioni</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="webrtc.html">Video Chat</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="privacy.html">Privacy</a></li>
+                        <li class="nav-item">&nbsp;</li>
+                        <li class="nav-item">&nbsp;</li>
+                        <li class="nav-item">&nbsp;</li>
+                        <li class="nav-item">&nbsp;</li>
+			<!--  <li class="nav-item"><input type="checkbox" id="switch" onclick="updateTheme();" /><label for="switch">G/N</label>   </li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Header-->
+        <!-- Main Content-->
+        <main class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-10">
+                        <h1 class="section-heading">
+                        Informativa sulla riservatezza per chatmail.woodpeckersnest.space
+                        </h1>
+                        <h2 class="section-heading">Riepilogo: nessun dato personale richiesto o raccolto</h2>
+			<p>
+                <p>Questo server di Chatmail non richiede né conserva informazioni personali.
+                    I server di chatmail esistono per trasmettere (archiviare e consegnare) in modo affidabile messaggi crittografati end-to-end
+                    tra i dispositivi dell'utente che eseguono l'app di messaggistica Delta Chat.
+                    Tecnicamente, potresti pensare a un server Chatmail come
+                    un "router di messaggistica" crittografato end-to-end su scala Internet.</p>
+                    <p>Un server di chatmail è molto diverso dai classici server di posta elettronica (ad esempio i server di posta di Google)
+                    che richiedono dati personali e memorizzano permanentemente i messaggi.
+                    Un server di chatmail si comporta più come il server di messaggistica Signal
+                    ma non conosce i numeri di telefono e interopera in modo sicuro e automatico
+                    con altri chatmail e server di posta elettronica classici.</p>
+                    <p>A differenza dei classici server di posta elettronica, questo server di chatmail</p>
+                    <ul>
+                    <li>
+                    <p>rimuove incondizionatamente i messaggi dopo 20 giorni,</p>
+                    </li>
+                    <li>
+                    <p>vieta l'invio di messaggi non crittografati,</p>
+                    </li>
+                    <li>
+                    <p>non memorizza indirizzi Internet ("indirizzi IP"),</p>
+                    </li>
+                    <li>
+                    <p>non elabora indirizzi IP in relazione agli indirizzi e-mail.</p>
+                    </li>
+                    </ul>
+                    <p>A causa della conseguente mancanza di elaborazione di dati personali,
+                    questo server di chatmail potrebbe non richiedere un'informativa sulla privacy.</p>
+                    <p>Tuttavia, forniamo di seguito dettagli legali per semplificare la vita
+                    agli specialisti della protezione dei dati e agli avvocati che esaminano le operazioni di chatmail.</p>
+                    <h2>1. Nome e informazioni di contatto</h2>
+                    <p>Responsabile del trattamento dei Suoi dati personali è:
+                    <code>Andrea Lattmann</code></p>
+                    <p>E-mail: chatmail [at] woodpeckersnest [dot] space</p>
+                    <p>Abbiamo nominato un responsabile della protezione dei dati:</p>
+                    <p><code>Andrea Lattmann</code></p>
+                    <h2>2. Trattamento in caso di utilizzo dei servizi e-mail in chat</h2>
+                    <p>Forniamo servizi ottimizzati per l'uso da app <a href="https://delta.chat">Delta Chat</a>
+                    ed elaboriamo solo i dati necessari
+                    per la configurazione e l'esecuzione tecnica della consegna dei messaggi.
+                    Lo scopo dell'elaborazione è che gli utenti possano
+                    leggere, scrivere, gestire, eliminare, inviare e ricevere messaggi di chat.
+                    A questo scopo,
+                    utilizziamo software lato server
+                    che ci consente di inviare e ricevere messaggi.</p>
+                    <p>Elaboriamo i seguenti dati e dettagli:</p>
+                    <ul>
+                    <li>
+                    <p>I messaggi in uscita e in entrata (SMTP) vengono archiviati per il transito
+                    per conto dei loro utenti fino a quando il messaggio non può essere consegnato.</p>
+                    </li>
+                    <li>
+                    <p>I messaggi e-mail vengono archiviati per il destinatario e resi accessibili tramite protocolli IMAP,
+                     fino alla cancellazione esplicita da parte dell'utente o fino al superamento di un periodo di tempo stabilito,
+                     (<em>normalmente 4-8 settimane</em>).</p>
+                    </li>
+                    <li>
+                    <p>I protocolli IMAP e SMTP sono protetti da password con credenziali univoche per ciascun account.</p>
+                    </li>
+                    <li>
+                    <p>Gli utenti possono recuperare o eliminare tutti i messaggi archiviati
+                    senza l'intervento degli operatori utilizzando gli strumenti client IMAP standard.</p>
+                    </li>
+                    <li>
+                    <p>Gli utenti possono connettersi a un "servizio di inoltro in tempo reale"
+                    per stabilire una connessione Peer-to-Peer tra i dispositivi degli utenti,
+                    che consente loro di inviare e recuperare messaggi effimeri
+                    che non vengono mai archiviati sul server di chatmail, anche non in forma crittografata.</p>
+                    </li>
+                    </ul>
+                    <h3>2.1 Configurazione dell'account</h3>
+                    <p>La creazione di un account avviene in due modi sui nostri server di posta:</p>
+                    <ul>
+                    <li>
+                    <p>con un token di invito QR
+                     che viene scansionato utilizzando l'app Delta Chat
+                     e quindi l'account viene creato.</p>
+                    </li>
+                    <li>
+                    <p>consentendo a Delta Chat di creare altrimenti un account
+                     e registralo con un server di posta chatmail.woodpeckersnest.space.</p>
+                    </li>
+                    </ul>
+                    <p>In entrambi i casi, elaboriamo l'indirizzo e-mail appena creato.
+                    Nessun numero di telefono,
+                    altri indirizzi e-mail,
+                    o altri dati identificabili
+                    è attualmente richiesto.
+                    La base giuridica del trattamento è
+                    Art. 6 (1) lett. b GDPR,
+                    poiché hai un contratto di utilizzo con noi
+                    utilizzando i nostri servizi.</p>
+                    <h2>3.2 Elaborazione dei Messaggi E-Mail</h2>
+                    <p>Inoltre,
+                    tratteremo i dati
+                    per mantenere operativa l’infrastruttura del server
+                    ai fini dell'invio di e-mail
+                    e prevenzione degli abusi.</p>
+                    <ul>
+                    <li>
+                    <p>Perciò,
+                     è necessario elaborare il contenuto e/o i metadati
+                     (ad esempio, intestazioni dell'e-mail e messaggi SMTP)
+                     di messaggi e-mail in transito.</p>
+                    </li>
+                    <li>
+                    <p>Conserveremo i registri dei messaggi in transito per un periodo limitato.
+                     Questi registri vengono utilizzati per eseguire il debug di problemi di consegna e bug del software.</p>
+                    </li>
+                    </ul>
+                    <p>Inoltre,
+                    elaboriamo i dati per proteggere i sistemi da un uso eccessivo.
+                    Pertanto vengono applicati dei limiti:</p>
+                    <ul>
+                    <li>
+                    <p>limiti d'invio</p>
+                    </li>
+                    <li>
+                    <p>limiti di conservazione</p>
+                    </li>
+                    <li>
+                    <p>limiti di dimensione dei messaggi</p>
+                    </li>
+                    <li>
+                    <p>qualsiasi altro limite necessario affinché l'intero server funzioni in modo corretto
+                     e per prevenire gli abusi.</p>
+                    </li>
+                    </ul>
+                    <p>Il trattamento e l'utilizzo delle autorizzazioni di cui sopra
+                    vengono eseguiti per fornire il servizio.
+                    Il trattamento dei dati è necessario per la fruizione dei nostri servizi,
+                    pertanto la base giuridica del trattamento è
+                    Art. 6 (1) lett. b GDPR,
+                    poiché hai un contratto di utilizzo con noi
+                    utilizzando i nostri servizi.
+                    La base giuridica del trattamento dei dati
+                    ai fini della sicurezza e della prevenzione degli abusi
+                    Art. 6 (1) lett. f GDPR.
+                    Ne risulta il nostro interesse legittimo
+                    dalle finalità sopra indicate.
+                    Non utilizzeremo i dati raccolti
+                    allo scopo di trarre conclusioni
+                    sulla tua persona.</p>
+                    <h2>3. Trattamento durante l'utilizzo del nostro sito web</h2>
+                    <p>Quando visiti il ​​nostro sito web,
+                    il browser utilizzato sul tuo dispositivo finale
+                    invia automaticamente informazioni al server del nostro sito web.
+                    Queste informazioni vengono temporaneamente memorizzate in un cosiddetto file di registro.
+                    Le seguenti informazioni vengono raccolte e archiviate
+                    fino a quando non verrà automaticamente eliminato
+                    (<em>solitamente 7 giorni</em>):</p>
+                    <ul>
+                    <li>
+                    <p>tipo di browser utilizzato,</p>
+                    </li>
+                    <li>
+                    <p>sistema operativo utilizzato,</p>
+                    </li>
+                    <li>
+                    <p>data e ora di accesso nonché</p>
+                    </li>
+                    <li>
+                    <p>paese di origine e indirizzo IP,</p>
+                    </li>
+                    <li>
+                    <p>il nome del file richiesto o la risorsa HTTP,</p>
+                    </li>
+                    <li>
+                    <p>la quantità di dati trasferiti,</p>
+                    </li>
+                    <li>
+                    <p>lo stato di accesso (file trasferito, file non trovato, ecc.) e</p>
+                    </li>
+                    <li>
+                    <p>la pagina da cui è stato richiesto il file.</p>
+                    </li>
+                    </ul>
+                    <p>Questo sito web è ospitato da un fornitore di servizi esterno (hoster).
+                    I dati personali raccolti su questo sito web vengono archiviati
+                    sui server dell'hoster.
+                    Il nostro hoster tratterà i tuoi dati
+                    solo nella misura necessaria per adempiere ai propri obblighi
+                    eseguire secondo le nostre istruzioni.
+                    Al fine di garantire un trattamento conforme alla protezione dei dati,
+                    abbiamo concluso un accordo sul trattamento dei dati con il nostro hoster.</p>
+                    <p>I suddetti dati vengono da noi trattati per le seguenti finalità:</p>
+                    <ul>
+                    <li>
+                    <p>garantire una configurazione affidabile della connessione del sito web,</p>
+                    </li>
+                    <li>
+                    <p>garantire un uso conveniente del nostro sito web,</p>
+                    </li>
+                    <li>
+                    <p>verificare e garantire la sicurezza e la stabilità del sistema, e</p>
+                    </li>
+                    <li>
+                    <p>per altri scopi amministrativi.</p>
+                    </li>
+                    </ul>
+                    <p>La base giuridica del trattamento dei dati è
+                    Art. 6 (1) lett. f GDPR.
+                    Ne risulta il nostro interesse legittimo
+                    dalle finalità di raccolta dei dati sopra indicate.
+                    Non utilizzeremo i dati raccolti
+                    allo scopo di trarre conclusioni sulla tua persona.</p>
+                    <h2>4. Trasferimento dei dati</h2>
+                    <p>Non conserviamo alcun dato personale ma messaggi e-mail in attesa di essere recapitati
+                    possono contenere dati personali.
+                    Eventuali dati personali residui non verranno ceduti a terzi
+                    per finalità diverse da quelle di seguito elencate:</p>
+                    <p>a) hai prestato il tuo consenso espresso
+                    ai sensi dell'art. 6 par. 1 frase 1 lett. a GDPR,</p>
+                    <p>b) la comunicazione è necessaria per far valere, esercitare o difendere un diritto in sede giudiziaria
+                    ai sensi dell'art. 6 cpv. 1 frase 1 lett. f GDPR
+                    e non c'è motivo di presumere che tu lo abbia fatto
+                    un interesse preminente degno di tutela
+                    nella mancata diffusione dei tuoi dati,</p>
+                    <p>c) nel caso in cui sussista un obbligo legale di comunicare i tuoi dati
+                    ai sensi dell'art. 6 par. 1 frase 1 lett. c GDPR,
+                    così come</p>
+                    <p>d) ciò è legalmente consentito e necessario
+                    ai sensi dell'art. 6 par. 1 S. 1 lett. b GDPR
+                    per l'elaborazione dei rapporti contrattuali con voi,</p>
+                    <p>e) ciò viene effettuato da un fornitore di servizi
+                    agendo per nostro conto e dietro nostre esclusive istruzioni,
+                    da noi accuratamente selezionati (Art. 28(1) GDPR)
+                    e con i quali abbiamo concluso un corrispondente contratto di trattamento su incarico (art. 28 par. 3 GDPR),
+                    che obbliga il nostro appaltatore,
+                    tra le altre cose,
+                    per attuare adeguate misure di sicurezza
+                    e ci concede ampi poteri di controllo.</p>
+                    <h2>5. Diritti dell'interessato</h2>
+                    <p>I diritti nascono dagli articoli da 12 a 23 GDPR.
+                    Poiché sui nostri server non vengono archiviati dati personali,
+                    anche in forma criptata,
+                    non è necessario fornire informazioni
+                    su queste o possibili obiezioni.
+                    È possibile effettuare una cancellazione
+                    direttamente nel messenger e-mail Delta Chat.</p>
+                    <p>Se avete domande o reclami,
+                    non esitate a contattarci via e-mail:
+                    chatmail [at] woodpeckersnest [dot] space</p>
+                    <p>Di norma potete rivolgervi all’autorità di vigilanza del vostro luogo di residenza abituale
+                    o posto di lavoro
+                    o la nostra sede legale a questo scopo.
+                    L’autorità di vigilanza competente per la nostra sede di attività
+                    è il <code></code>.</p>
+                    <h2>6. Validità della presente informativa sulla privacy</h2>
+                    <p>La presente dichiarazione sulla protezione dei dati è valida
+                    a partire da <em>ottobre 2024</em>.
+                    A causa dell'ulteriore sviluppo del nostro servizio e delle nostre offerte
+                    o a causa di modifiche dei requisiti legali o ufficiali,
+                    potrebbe rendersi necessario rivedere di tanto in tanto la presente dichiarazione sulla protezione dei dati.</p>
+                    <p>La presente dichiarazione sulla protezione dei dati è valida
+                    a partire da <em>Maggio 2024</em>.
+                    A causa dell'ulteriore sviluppo del nostro servizio e delle nostre offerte
+                    o a causa di modifiche dei requisiti legali o ufficiali,
+                    potrebbe essere necessario rivedere di tanto in tanto la presente dichiarazione sulla protezione dei dati.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer-->
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+			    <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                                <a href="https://github.com/deltachat/chatmail">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+
+                       
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

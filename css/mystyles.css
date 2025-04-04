@@ -210,3 +210,8 @@ code {
   --bs-text-opacity: 1;
   color: #88D080 !important;
 }
+
+a {
+  color: #f15a5a;
+  text-decoration: underline;
+}

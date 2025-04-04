@@ -203,3 +203,10 @@ code {
   padding: 2.5px 5px;
   border-radius: 6px;
 }
+
+/* roughnecks */
+
+.text-success {
+  --bs-text-opacity: 1;
+  color: #88D080 !important;
+}

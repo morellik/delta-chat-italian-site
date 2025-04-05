@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Delta Chat</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Pagina Ufficiale del Server Chatmail Italiano" />
+    <title>Chatmail</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <link href="css/mystyles.css" rel="stylesheet" />
-			<script>
-				function updateTheme() {
-					if (document.querySelector("html").getAttribute('data-bs-theme') == 'dark') {
-                                              document.querySelector("html").setAttribute('data-bs-theme','light')
-                                            }
-                                        else {
-                                            document.querySelector("html").setAttribute('data-bs-theme','dark')
-                                    }
-				}
+    <script>
+        function updateTheme() {
+            if (document.querySelector("html").getAttribute('data-bs-theme') == 'dark') {
+                document.querySelector("html").setAttribute('data-bs-theme', 'light')
+            }
+            else {
+                document.querySelector("html").setAttribute('data-bs-theme', 'dark')
+            }
+        }
 
 
-                const toggle = document.querySelector('.toggle-input');
-                const initialState = localStorage.getItem('toggleState') == 'true';
-                toggle.checked = initialState;
+        const toggle = document.querySelector('.toggle-input');
+        const initialState = localStorage.getItem('toggleState') == 'true';
+        toggle.checked = initialState;
 
-                toggle.addEventListener('change', function() {
-                    
-                        localStorage.setItem('toggleState', toggle.checked);
-                });
-			</script>
-    </head>
-    <body>
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand text-success" href="index.html">Delta Chat Italia</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        toggle.addEventListener('change', function () {
+
+            localStorage.setItem('toggleState', toggle.checked);
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand text-success" href="index.html">Delta Chat Italia</a>
+            <input type="checkbox" id="switch" onclick="updateTheme();" /><label for="switch">G/N</label>
+            <!--<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -50,118 +52,176 @@
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="webrtc.html">Video Chat</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="privacy.html">Riservatezza</a></li>
-                       <!-- <li class="nav-item"> <button class="btn btn-dark shadow" id="btnSwitch" onclick="updateTheme();">Toggle Mode</button></li> -->
-                       <li class="nav-item">&nbsp;</li>
-                       <li class="nav-item">&nbsp;</li>
-                       <li class="nav-item">&nbsp;</li>
-                       <li class="nav-item">&nbsp;</li>
-		       <!--            <li class="nav-item"><input type="checkbox" id="switch" onclick="updateTheme();" /><label for="switch">G/N</label>   </li> -->
+                        <li class="nav-item"> <button class="btn btn-dark shadow" id="btnSwitch" onclick="updateTheme();">Toggle Mode</button></li>
+                        <li class="nav-item">&nbsp;</li>
+                        <li class="nav-item">&nbsp;</li>
+                        <li class="nav-item">&nbsp;</li>
+                        <li class="nav-item">&nbsp;</li>
+                        <li class="nav-item"><input type="checkbox" id="switch" onclick="updateTheme();" /><label for="switch">G/N</label>   </li>
                         
                     </ul>
-                    <ul class="navbar-nav ml-auto" >
-                        
+                    <ul class="navbar-nav ml-auto" >  
                     </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- Page Header-->
-        <!-- Main Content-->
-        <div class="wrapper">
-            <div class="toggle">
-              <input class="toggle-input" type="checkbox" />
-              <div class="toggle-bg"></div>
-              <div class="toggle-switch">
+                </div>-->
+        </div>
+    </nav>
+    <!-- Page Header-->
+    <!-- Main Content-->
+    <div class="wrapper">
+        <div class="toggle">
+            <input class="toggle-input" type="checkbox" />
+            <div class="toggle-bg"></div>
+            <div class="toggle-switch">
                 <div class="toggle-switch-figure"></div>
                 <div class="toggle-switch-figureAlt"></div>
-              </div>  
             </div>
-          </div>
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-10">
-                    <!-- Post preview-->
-                    <div class="post-preview">
-				<h2 class="post-title">Benvenuti nel mondo della messaggistica istantanea, interoperabile e che preserva la riservatezza</h2>
+        </div>
+    </div>
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-10">
+                <!-- Post preview-->
+                <div class="post-preview">
+                    <h1 class="post-title">Benvenuti nel mondo della messaggistica istantanea, interoperabile e che
+                        preserva la riservatezza</h1>
 
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
+                </div>
+                <!-- Divider-->
+                <hr class="my-4" />
 
-                    <img class="img-fluid" src="assets/img/envelope.png">
+                <img class="img-fluid" src="assets/img/envelope.png">
 
 
-                    <pre>`chatmail.woodpeckersnest.space`</pre>
-                    <p>è un servizio di messaggistica incentrato sulla riservatezza, ideato per funzionare su Delta Chat.
-                    Delta Chat è un messaggero sicuro che permette alle persone di chattare tra di loro anche utilizzando server diversi.
+                <pre>`chatmail.woodpeckersnest.space`</pre>
+                <p>è un servizio di messaggistica incentrato sulla riservatezza, ideato per funzionare su Delta Chat.
+                    Delta Chat è un messaggero sicuro che permette alle persone di chattare tra di loro anche
+                    utilizzando server diversi.
                     Questo è solo uno di quelli su cui ti puoi iscrivere ed ha le seguenti caratteristiche:
 
-                    <ul>
-                        <li>Nessun numero di telefono, indirizzo email, nome reale, ecc. è richiesto per il profilo;</li>
-                        <li>100M di spazio a disposizione;</li>
-                        <li>Il server conserva i messaggi per massimo 20 giorni;</li>
-                        <li>Ogni utente può inviare fino a 60 email al minuto;</li>
-                        <li>La dimensione massima dei messaggi è di 30M;</li>
-                        <li>La lunghezza del nome utente (la parte dell'indirizzo prima della @) deve essere di 9 caratteri;</li>
-                        <li>La lunghezza della password deve essere di almeno 9 caratteri;</li>
-                        <li>Non è consentito l'invio di messaggi in chiaro (non cifrati);</li>
-                        <li>Non conserva gli indirizzi IP;</li>
-                        <li>Gli indirizzi non utilizzati per 50 giorni vengono distrutti.</li>
-                    </ul>
-                    </p>
-                    <div class="post-preview">
-				<h3 class="post-subtitle"><a href="dcaccount:https://chatmail.woodpeckersnest.space/new">Clicca per creare il tuo profilo sul nostro server</a></h3>
-		   </div>
-                    <hr class="my-4" />
-                    <!-- Post preview-->
+                <ul>
+                    <li>Nessun numero di telefono, indirizzo email, nome reale, ecc. è richiesto per il profilo;</li>
+                    <li>100M di spazio a disposizione;</li>
+                    <li>Il server conserva i messaggi per massimo 20 giorni;</li>
+                    <li>Ogni utente può inviare fino a 60 email al minuto;</li>
+                    <li>La dimensione massima dei messaggi è di 30M;</li>
+                    <li>La lunghezza del nome utente (la parte dell'indirizzo prima della @) deve essere di 9 caratteri;
+                    </li>
+                    <li>La lunghezza della password deve essere di almeno 9 caratteri;</li>
+                    <li>Non è consentito l'invio di messaggi in chiaro (non cifrati);</li>
+                    <li>Non conserva gli indirizzi IP;</li>
+                    <li>Gli indirizzi non utilizzati per 50 giorni vengono distrutti.</li>
+                </ul>
+                </p>
+                <div class="post-preview">
+                    <h3 class="post-subtitle"><a href="dcaccount:https://chatmail.woodpeckersnest.space/new">Clicca per
+                            creare il tuo profilo sul nostro server</a></h3>
                 </div>
-		<div class="col-md-10 col-lg-8 col-xl-10">
-                        <p>
-			Se stai visualizzando questa pagina su un dispositivo diverso senza un'app Delta Chat, puoi anche <strong>scansionare questo codice QR</strong>:</p>
-<p><a href="dcaccount:https://chatmail.woodpeckersnest.space/new">
-    <img width="300" style="float: none;" src="https://chatmail.woodpeckersnest.space/qr-chatmail-invite-chatmail.woodpeckersnest.space.png"></a>
-			
-</p>	
-<p><strong>Scegli</strong> il tuo Avatar e il tuo Nome</p>
-<p><strong>Inizia</strong> a chattare con qualsiasi contatto Delta Chat utilizzando <a href="https://delta.chat/en/help#howtoe2ee">codici di invito QR</a></p>
-<p><strong>Scansiona</strong> inoltre questi due codici QR (o cliccali) e vieni a trovarci
-rispettivamente: 
-<br />nel gruppo "Amici Delta Cchino"</p>
-<p><a href="https://i.delta.chat/#6FE1642916908F1AC9CC7557CC99CF5DDB92043=
+                <hr class="my-4" />
+                <!-- Post preview-->
+            </div>
+            <div class="col-md-10 col-lg-8 col-xl-10">
+                <p>
+                    Se stai visualizzando questa pagina su un dispositivo diverso senza un'app Delta Chat, puoi anche
+                    <strong>scansionare questo codice QR</strong>:</p>
+                <p><a href="dcaccount:https://chatmail.woodpeckersnest.space/new">
+                        <img width="300" style="float: none;"
+                            src="https://chatmail.woodpeckersnest.space/qr-chatmail-invite-chatmail.woodpeckersnest.space.png"></a>
+
+                </p>
+                <p><strong>Scegli</strong> il tuo Avatar e il tuo Nome</p>
+                <p><strong>Inizia</strong> a chattare con qualsiasi contatto Delta Chat utilizzando <a
+                        href="https://delta.chat/en/help#howtoe2ee">codici di invito QR</a></p>
+                <p><strong>Scansiona</strong> inoltre questi due codici QR (o cliccali) e vieni a trovarci
+                    rispettivamente:
+                    <br />nel gruppo "Amici Delta Cchino"
+                </p>
+                <p><a href="https://i.delta.chat/#6FE1642916908F1AC9CC7557CC99CF5DDB92043=
 C&amp;a=groupsbot%40testrun.org&amp;g=Amici%20Delta%20Cchino%20%CE%B4%F=
 0%9F%A6%83%EF%B8%8F&amp;x=g9GMUqKwvgB&amp;i=0qBMdsGrq7n&amp;s=_tiLU2I=
 cUrs"><img alt="" src="assets/img/qr-chatmail-invite-amicideltacchino.png"></a></p>
-<p>e nel gruppo ufficiale "Delta Chat Italia"</p>
-<p><a href="https://i.delta.chat/#6FE1642916908F1AC9CC7557CC99CF5DDB92043C&a=
+                <p>e nel gruppo ufficiale "Delta Chat Italia"</p>
+                <p><a href="https://i.delta.chat/#6FE1642916908F1AC9CC7557CC99CF5DDB92043C&a=
 groupsbot%40testrun.org&g=Delta%20Chat%20Italia&x=EgfqweCNi8h&i=_r8qVxe7uTv&s=
 lBk9h2qZSY3"><img alt="" src="assets/img/qr-chatmail-invite-delta-chat-italia.png"></a></p>
-                    </div>
-
             </div>
         </div>
-        <!-- Footer-->
-        <footer class="border-top">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7">
-			    <ul class="list-inline text-center">
-                            <li class="list-inline-item">
-                                <a href="https://github.com/deltachat/chatmail">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
+    </div>
+    <!-- Privacy-->
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-10">
+                <hr class="my-4" />
+                <h2>Riservatezza</h2>
+                <h4>Nessun dato personale richiesto o raccolto</h4>
+                <br />
+                <p>Questo server Chatmail non richiede né conserva informazioni personali.
+                    I server Chatmail esistono per trasmettere (archiviare e consegnare) in
+                    modo affidabile messaggi cifrati end-to-end tra i dispositivi dell’utente
+                    che eseguono l’app di messaggistica Delta Chat. Tecnicamente, potresti pensare
+                    a un server Chatmail come un “router di messaggistica” cifrato end-to-end su
+                    scala Internet.</p>
+                <p>Un server Chatmail è molto diverso dai classici server di posta elettronica
+                    (ad esempio i server di posta di Google) che richiedono dati personali e
+                    memorizzano permanentemente i messaggi. Un server Chatmail si comporta più
+                    come il server di messaggistica Signal ma non conosce i numeri di telefono e
+                    interopera in modo sicuro e automatico con altri Chatmail e server di posta
+                    elettronica classici.</p>
+                <p>A differenza dei classici server di posta elettronica, questo server di chatmail</p>
+                <ul>
+                    <li>
+                        <p>rimuove incondizionatamente i messaggi dopo 20 giorni,</p>
+                    </li>
+                    <li>
+                        <p>vieta l'invio di messaggi non crittografati,</p>
+                    </li>
+                    <li>
+                        <p>non memorizza indirizzi Internet ("indirizzi IP"),</p>
+                    </li>
+                    <li>
+                        <p>non elabora indirizzi IP in relazione agli indirizzi e-mail.</p>
+                    </li>
+                </ul>
+                <p>A causa della conseguente mancanza di elaborazione di dati personali, questo
+                    server Chatmail <strong> non richiede un’informativa sulla privacy</strong>.
+                    Per specialisti e fanatici si invita a far riferimento alla pagina ufficiale
+                    del progetto: <a href="https://nine.testrun.org/privacy.html" target="_blank">nine</a>
+            </div>
+        </div>
+    </div>
+    <!-- Footer-->
+    <footer>
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-10">
+                    <hr class="my-4" />
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                            <a href="https://github.com/deltachat/chatmail" title="Chatmail GitHub repository" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://github.com/morellik/delta-chat-italian-site" title="Site repository" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
 
-                        
-                    </div>
+
                 </div>
             </div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
 </html>

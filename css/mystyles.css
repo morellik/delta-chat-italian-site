@@ -219,3 +219,7 @@ a {
 .fa-lg {
   color: #88D080;
 }
+
+input:checked+label {
+  background: #88D080;
+}

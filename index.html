@@ -88,20 +88,18 @@
                     Se stai visualizzando questa pagina su un dispositivo diverso senza un'app Delta Chat, puoi anche
                     <strong>scansionare questo codice QR</strong>:</p>
                 <p><a href="dcaccount:https://chatmail.woodpeckersnest.space/new">
-                        <img width="300" style="float: none;"
+                        <img width="300" style="float: none;" alt="QR-Code di Invito"
                             src="assets/img/qr-chatmail-invite-chatmail.woodpeckersnest.space.png"></a>
 
                 </p>
                 <p><strong>Scegli</strong> il tuo Avatar e il tuo Nome</p>
                 <p><strong>Inizia</strong> a chattare con qualsiasi contatto Delta Chat utilizzando <a
                         href="https://delta.chat/it/help#howtoe2ee" target="_blank">codici di invito QR</a></p>
-                <p><strong>Scansiona</strong> inoltre questi due codici QR (o cliccali) e vieni a trovarci
-                    rispettivamente:
-                    <br />nel gruppo "Amici Delta Cchino"
-                </p>
-                <p><a href="https://i.delta.chat/#6FE1642916908F1AC9CC7557CC99CF5DDB92043C&a=groupsbot%40testrun.org&g=Amici%20Delta%20Cchino%20%CE%B4%F0%9F%A6%83%EF%B8%8F&x=g9GMUqKwvgB&i=0qBMdsGrq7n&s=_tiLU2IcUrs"><img alt="" src="assets/img/qr-chatmail-invite-amicideltacchino.png"></a></p>
-                <p>e nel gruppo ufficiale "Delta Chat Italia"</p>
-                <p><a href="https://i.delta.chat/#6FE1642916908F1AC9CC7557CC99CF5DDB92043C&a=groupsbot%40testrun.org&g=Delta%20Chat%20Italia&x=EgfqweCNi8h&i=_r8qVxe7uTv&s=lBk9h2qZSY3"><img alt="" src="assets/img/qr-chatmail-invite-delta-chat-italia.png"></a></p>
+                <p><strong>Scansiona</strong> inoltre questo codice QR (o cliccalo) e vieni a trovarci
+                nel gruppo "Amici Delta Cchino" e nel gruppo ufficiale "Delta Chat Italia".
+                <p><a href="https://i.delta.chat/#C2846EB4C1CB8DF84B1818F5E3A638FC3FBDC981&a=stalebot1%40nine.testrun.org&g=DeltaSciatto&x=tIeI9bdNFoQOAZ7CLMIr1UmM&i=Xz5yobHhfH9SftQ0rBCqE9o-&s=T-hdO74c5jtnvwnIiQbCVvpj">
+                <img width="300" style="float: none;" alt="QR-Code di Invito" src="assets/img/qr-chatmail-invite.png"></a></p>
+                <p></p>
             </div>
         </div>
     </div>
@@ -177,23 +175,23 @@
     <script>
         function updateTheme() {
             if (document.querySelector("html").getAttribute('data-bs-theme') == 'dark') {
-                document.querySelector("html").setAttribute('data-bs-theme', 'light')
-            }
-            else {
-                document.querySelector("html").setAttribute('data-bs-theme', 'dark')
+                document.querySelector("html").setAttribute('data-bs-theme', 'light');
+            } else {
+                document.querySelector("html").setAttribute('data-bs-theme', 'dark');
             }
         }
 
-
         const toggle = document.querySelector('.toggle-input');
-        const initialState = localStorage.getItem('toggleState') == 'true';
-        toggle.checked = initialState;
+        if (toggle) {
+            const initialState = localStorage.getItem('toggleState') === 'true';
+            toggle.checked = initialState;
 
-        toggle.addEventListener('change', function () {
-
-            localStorage.setItem('toggleState', toggle.checked);
-        });
+            toggle.addEventListener('change', function () {
+                localStorage.setItem('toggleState', toggle.checked);
+            });
+        }
     </script>
 </body>
 
 </html>
+
